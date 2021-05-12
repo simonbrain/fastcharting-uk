@@ -37,14 +37,15 @@ router.use(
     authRequired: false,
     auth0Logout: true,
     issuerBaseURL: 'https://dev-2k06-6q4.us.auth0.com',
-    baseURL: 'http://localhost:8000',
-    clientID: 'kYIdnc6K6FeqTi9lRDaG3aG9baA8wVG7',
+    baseURL: 'http://34.89.4.53:8000',
+    clientID: 'bM0Tl72lomPAbV3YWeXTlmGTb8tMxmpH',
     secret: 'jkdjhbdwfjbhbekqwjbfjkbjhfbhjberjhjhlrrhjlehjlrbbljkvfrblkjbljkvkbljvef'
   })
 );
 
 router
-    .get("/", requiresAuth(), (req,res) => {
+    //.get("/", requiresAuth(), (req,res) => {
+    .get("/", (req,res) => {
         //console.log(JSON.stringify(req.query))
         let data_json = JSON.stringify(req.query)
         let data = req.query
@@ -64,7 +65,7 @@ router
         const getData = async ()=> {
             try {
                 const response = await axios.get(
-                    `http://localhost:8001?venue=${venue}&instrument=${instrument}&frequency=${frequency}&period=${period}`
+                    `http://34.89.4.53:8001?venue=${venue}&instrument=${instrument}&frequency=${frequency}&period=${period}`
                     ).then(resp => {
                         res.send(resp.data)
                     })
