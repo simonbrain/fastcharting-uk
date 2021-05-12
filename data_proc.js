@@ -4,16 +4,16 @@ const express = require('express');
 const app = express();
 
 const { auth, requiresAuth } = require('express-openid-connect');
-app.use(
-  auth({
-    authRequired: false,
-    auth0Logout: true,
-    issuerBaseURL: 'https://dev-2k06-6q4.us.auth0.com',
-    baseURL: 'http://34.89.4.53:8001',
-    clientID: 'rrZn0c7uzUxOwPyEAawtXQFk4aVseArM',
-    secret: 'jkdjhbdwfjbhbekqwjbfjkbjhfbhjberjhjhlrrhjlehjlrbbljkvfrblkjbljkvkbljvef'
-  })
-);
+//app.use(
+  //auth({
+    //authRequired: false,
+    //auth0Logout: true,
+    //issuerBaseURL: 'https://dev-2k06-6q4.us.auth0.com',
+    //baseURL: 'http://34.89.4.53:8001',
+    //clientID: 'rrZn0c7uzUxOwPyEAawtXQFk4aVseArM',
+    //secret: 'jkdjhbdwfjbhbekqwjbfjkbjhfbhjberjhjhlrrhjlehjlrbbljkvfrblkjbljkvkbljvef'
+  //})
+//);
 
 app.get('/', (req, res) => {
     const venue = req.query.venue
