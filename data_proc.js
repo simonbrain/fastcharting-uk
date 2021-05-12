@@ -9,8 +9,8 @@ app.use(
     authRequired: false,
     auth0Logout: true,
     issuerBaseURL: 'https://dev-2k06-6q4.us.auth0.com',
-    baseURL: 'http://localhost:8001',
-    clientID: 'G2qghvMJrNzMIKbJnCar5R1SrDawqBb6',
+    baseURL: 'http://34.89.4.53:8001',
+    clientID: 'rrZn0c7uzUxOwPyEAawtXQFk4aVseArM',
     secret: 'jkdjhbdwfjbhbekqwjbfjkbjhfbhjberjhjhlrrhjlehjlrbbljkvfrblkjbljkvkbljvef'
   })
 );
