@@ -1,3 +1,3 @@
 git checkout HEAD^ file/to/overwrite
 
-sudo git pull -f https://github.com/simonbrain/fastcharting.git
+sudo git pull -f https://github.com/simonbrain/fastcharting-uk.git

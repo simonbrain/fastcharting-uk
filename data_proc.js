@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.get('/', requiresAuth(), (req, res) => {
+app.get('/', (req, res) => {
     const venue = req.query.venue
     //console.log(venue)
     const instrument = req.query.instrument
