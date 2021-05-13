@@ -32,7 +32,7 @@ app1.get('/', (req, res) => {
   
 });
 
-app2.get('/', (req, res) => {
+app2.get('/dev/', (req, res) => {
   res.status(200).send('Hello from Fastcharts backend').end();
 
 });
