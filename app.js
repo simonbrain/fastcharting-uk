@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app1 = express();
+const app2 = express();
 const axios = require('axios');
 const data = require("./routes/data");
 const info = require("./routes/info");
@@ -31,11 +32,24 @@ app1.get('/', (req, res) => {
   
 });
 
-// Start the server
-const PORT = process.env.PORT || 8000;
-app1.listen(PORT, () => {  
-  console.log(`App listening on port ${PORT}`);
+app2.get('/', (req, res) => {
+  //res.status(200).send('Hello from Fastcharts backend').end();
+
+});
+
+// Start the frontend server
+const PORT1 = process.env.PORT || 8000;
+app1.listen(PORT1, () => {  
+  console.log(`App listening on port ${PORT1}`);
+  console.log('Press Ctrl+C to quit.');
+});
+
+// Start the backend server
+const PORT2 = process.env.PORT || 8001;
+app2.listen(PORT2, () => {  
+  console.log(`App listening on port ${PORT2}`);
   console.log('Press Ctrl+C to quit.');
 });
 
 module.exports = app1;
+module.exports = app2;
