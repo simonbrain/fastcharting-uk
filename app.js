@@ -1,17 +1,17 @@
 'use strict';
 
 const express = require('express');
-const app = express();
+const app1 = express();
 const axios = require('axios');
 const data = require("./routes/data");
 const info = require("./routes/info");
 
 //app.use(express.static('public'));
-app.use("/data",data);
-app.use("/info",info);
+app1.use("/data",data);
+app1.use("/info",info);
 
 const { auth, requiresAuth } = require('express-openid-connect');
-app.use(
+app1.use(
   auth({
     authRequired: false,
     auth0Logout: true,
@@ -24,7 +24,7 @@ app.use(
 );
 
 //app.get('/', (req, res) => {
-app.get('/', (req, res) => {
+app1.get('/', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged In' : 'Logged Out')
     //res.sendFile(path.join(__dirname, '/index.html'));
     //res.status(200).send('Hello, Fastcharts!').end();
@@ -33,9 +33,9 @@ app.get('/', (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {  
+app1.listen(PORT, () => {  
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
 
-module.exports = app;
+module.exports = app1;

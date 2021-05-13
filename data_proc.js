@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 
-const { auth, requiresAuth } = require('express-openid-connect');
+//const { auth, requiresAuth } = require('express-openid-connect');
 //app.use(
   //auth({
     //authRequired: false,
